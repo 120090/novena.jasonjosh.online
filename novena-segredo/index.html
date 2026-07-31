@@ -196,6 +196,20 @@ header{background:var(--card);border-bottom:1.5px solid var(--line);padding:0 18
   <symbol id="ico-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
 </svg>
 
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '291489849487696');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=291489849487696&ev=PageView&noscript=1" alt=""/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -469,5 +483,40 @@ function faq(el){
 }
 </script>
 
+
+<!-- Meta Pixel - eventos -->
+<script>
+(function(){
+  function oferta(){
+    var s = document.querySelector('.pk.on');
+    if(!s) return {valor:0, nome:'Kit Novena'};
+    var l = s.querySelector('.pl');
+    var v = parseFloat(s.getAttribute('data-price') || '0');
+    return {valor: isNaN(v)?0:v, nome: l ? l.textContent.trim() : 'Kit Novena'};
+  }
+  var PROD = document.title.split('|')[0].trim();
+
+  if(typeof fbq === 'function'){
+    var o = oferta();
+    fbq('track','ViewContent',{content_name:PROD, content_type:'product', value:o.valor, currency:'BRL'});
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || typeof t.closest !== 'function') return;
+    var a = t.closest('a[href*="pay.hotmart.com"]');
+    if(!a || typeof fbq !== 'function') return;
+    var o = oferta();
+    fbq('track','InitiateCheckout',{
+      content_name: PROD + ' - ' + o.nome,
+      content_type: 'product',
+      value: o.valor,
+      currency: 'BRL',
+      num_items: 1
+    });
+  }, true);
+})();
+</script>
+<!-- End Meta Pixel - eventos -->
 </body>
 </html>
