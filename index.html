@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velas Artesanais | Novenas de 9 Dias</title>
+<meta name="description" content="Velas artesanais criadas para acompanhar novenas de 9 dias. Escolha a sua intenção.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#faf6ef;
+  --card:#fffdf9;
+  --text:#2b241c;
+  --sub:#6b6155;
+  --line:#e8ddcb;
+  --gold:#b08d57;
+  --gold-dark:#8a6d3f;
+  --gold-light:#f3e6cd;
+}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+
+.tb{background:var(--gold-dark);color:#fff;text-align:center;padding:10px 16px;font-size:12px;font-weight:700;letter-spacing:.3px;line-height:1.5}
+
+header{background:var(--card);border-bottom:1.5px solid var(--line);padding:0 18px;height:64px;display:flex;align-items:center;justify-content:center}
+.hlogo{font-family:'Playfair Display',serif;font-weight:700;font-size:19px;letter-spacing:.3px}
+
+.hero{max-width:760px;margin:0 auto;padding:44px 22px 10px;text-align:center}
+.hero .eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--gold-dark);margin-bottom:12px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,6.5vw,40px);font-weight:700;line-height:1.18;letter-spacing:-.3px}
+.hero p{font-size:15.5px;line-height:1.75;color:var(--sub);margin-top:16px}
+
+.rule{width:56px;height:2px;background:var(--gold);margin:30px auto 0;border-radius:2px}
+
+.grid{max-width:1100px;margin:0 auto;padding:34px 18px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .18s,transform .18s,box-shadow .18s}
+.card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 28px rgba(138,109,63,.13)}
+.card .thumb{position:relative;width:100%;aspect-ratio:1;background:var(--gold-light)}
+.card .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .body{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.card .kicker{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px;color:var(--gold-dark);margin-bottom:7px}
+.card h2{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;line-height:1.25;margin-bottom:8px}
+.card .desc{font-size:13.5px;line-height:1.6;color:var(--sub);flex:1}
+.card .go{margin-top:16px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;color:var(--gold-dark);display:flex;align-items:center;gap:6px}
+.card .go svg{width:15px;height:15px;stroke:currentColor;stroke-width:2.4;fill:none}
+
+footer{border-top:1px solid var(--line);padding:26px 18px 40px;text-align:center;font-size:12.5px;color:var(--sub);line-height:1.7}
+</style>
+</head>
+<body>
+
+<div class="tb">FRETE GRÁTIS PARA TODO O BRASIL · VELAS FEITAS À MÃO</div>
+
+<header><div class="hlogo">Casa Ch'i</div></header>
+
+<section class="hero">
+  <div class="eyebrow">Novenas de 9 dias</div>
+  <h1>Uma vela para cada intenção</h1>
+  <p>Cada novena é um caminho de nove dias, com uma vela artesanal feita para acompanhar a sua oração do primeiro ao último acender. Escolha a intenção que fala com o seu momento.</p>
+  <div class="rule"></div>
+</section>
+
+<main class="grid">
+
+  <a class="card" href="novena-amor/">
+    <div class="thumb"><img src="novena-amor/imagens/hero.png" alt="Vela da União Sagrada" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">União</div>
+      <h2>Vela da União Sagrada</h2>
+      <p class="desc">Novena de 9 noites para reatar e fortalecer o amor.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-cura/">
+    <div class="thumb"><img src="novena-cura/imagens/hero.png" alt="Vela da Cura e Restauração" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Cura</div>
+      <h2>Vela da Cura e Restauração</h2>
+      <p class="desc">Novena de 9 dias pela saúde do corpo e da alma.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-prosperidade/">
+    <div class="thumb"><img src="novena-prosperidade/imagens/hero.png" alt="Vela da Prosperidade Selada" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Prosperidade</div>
+      <h2>Vela da Prosperidade Selada</h2>
+      <p class="desc">Novena dos 9 dias para abrir caminhos e sustento.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-protecao/">
+    <div class="thumb"><img src="novena-protecao/imagens/hero.png" alt="Vela do Escudo Sagrado" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Proteção</div>
+      <h2>Vela do Escudo Sagrado</h2>
+      <p class="desc">Novena de proteção espiritual para você e sua casa.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-fertilidade/">
+    <div class="thumb"><img src="novena-fertilidade/imagens/hero.png" alt="Vela do Milagre da Vida" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Fertilidade</div>
+      <h2>Vela do Milagre da Vida</h2>
+      <p class="desc">Novena para a chegada de um filho.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-libertacao/">
+    <div class="thumb"><img src="novena-libertacao/imagens/hero.png" alt="Vela da Libertação Total" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Libertação</div>
+      <h2>Vela da Libertação Total</h2>
+      <p class="desc">Novena de 9 noites contra a opressão espiritual.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-vicio/">
+    <div class="thumb"><img src="novena-vicio/imagens/hero.png" alt="Vela da Liberdade" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Vício</div>
+      <h2>Vela da Liberdade</h2>
+      <p class="desc">Novena de 9 dias contra o vício.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-apostas/">
+    <div class="thumb"><img src="novena-apostas/imagens/hero.png" alt="Vela da Libertação das Apostas" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Apostas</div>
+      <h2>Vela da Libertação das Apostas</h2>
+      <p class="desc">Novena de 9 noites para romper o ciclo do jogo.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-segredo/">
+    <div class="thumb"><img src="novena-segredo/imagens/hero.png" alt="Vela do Ritual Esquecido" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Ritual</div>
+      <h2>Vela do Ritual Esquecido</h2>
+      <p class="desc">Novena de 9 dias e a tradição que quase se perdeu.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+  <a class="card" href="novena-ecom/">
+    <div class="thumb"><img src="novena-ecom/imagens/hero.png" alt="Novena de Nossa Senhora Aparecida" loading="lazy"></div>
+    <div class="body">
+      <div class="kicker">Aparecida</div>
+      <h2>Novena de Nossa Senhora Aparecida</h2>
+      <p class="desc">Vela artesanal para a novena à padroeira do Brasil.</p>
+      <div class="go">Ver novena <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </a>
+
+</main>
+
+<footer>Casa Ch'i · Velas artesanais<br>Feitas à mão, uma a uma.</footer>
+
+</body>
+</html>
