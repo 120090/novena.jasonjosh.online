@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vela da Prosperidade Selada | Novena dos 9 Dias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap">
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#faf6ef;
+  --card:#fffdf9;
+  --text:#2b241c;
+  --sub:#6b6155;
+  --line:#e8ddcb;
+  --gold:#b08d57;
+  --gold-dark:#8a6d3f;
+  --gold-light:#f3e6cd;
+}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.serif{font-family:'Playfair Display',serif}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+
+/* topbar */
+.tb{background:var(--gold-dark);color:#fff;text-align:center;padding:10px 16px;font-size:12px;font-weight:700;letter-spacing:.3px;line-height:1.5}
+
+/* header */
+header{background:var(--card);border-bottom:1.5px solid var(--line);padding:0 18px;height:64px;display:flex;align-items:center;position:sticky;top:0;z-index:200}
+.hlogo{position:absolute;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-weight:700;font-size:19px;color:var(--text);letter-spacing:.3px}
+.hi{display:flex;align-items:center;gap:20px;margin-left:auto}
+.hi button{background:none;border:none;padding:2px;display:flex;align-items:center;position:relative}
+.hi svg{width:22px;height:22px;color:var(--text)}
+.cn{position:absolute;top:-5px;right:-7px;background:var(--gold-dark);color:#fff;font-size:8px;font-weight:800;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+
+/* breadcrumb */
+.bc{padding:12px 18px;font-size:12px;color:var(--sub);display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.bc a{color:var(--sub);text-decoration:none}
+.bc .s{color:#c9bda3}
+.bc .c{color:var(--text);font-weight:600}
+
+/* hero */
+.hero-grid{width:100%;max-width:1100px;margin:0 auto;padding-top:8px}
+.pc-img{position:relative;width:100%;aspect-ratio:1;background:var(--card)}
+.pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-right{}
+.st{padding:16px 18px 4px}
+.sr{display:flex;align-items:center;gap:3px;margin-bottom:8px}
+.sr svg{width:20px;height:20px;fill:var(--gold)}
+.srn{font-size:12.5px;color:var(--sub);font-weight:600;margin-left:4px}
+.pn{font-family:'Playfair Display',serif;font-size:clamp(24px,6.5vw,36px);font-weight:700;line-height:1.15;letter-spacing:-.2px;color:var(--text)}
+.pn span{display:block;font-size:14px;font-family:'Inter',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold-dark);margin-bottom:6px}
+
+/* buybox */
+.bb{padding:18px 18px 18px}
+.pk{display:flex;align-items:center;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:12px;background:var(--card);transition:border-color .15s;gap:12px;position:relative}
+.pk.on{border-color:var(--gold-dark);border-width:2.5px;background:var(--gold-light)}
+.rd{width:24px;height:24px;border-radius:50%;border:2.5px solid #ccbfa4;flex-shrink:0;background:#fff;transition:border-color .15s,border-width .15s}
+.pk.on .rd{border-color:var(--gold-dark);border-width:8px}
+.pi{flex:1;min-width:0}
+.pl{font-size:14px;font-weight:800;line-height:1.2}
+.pl-days{font-size:12px;font-weight:600;color:var(--sub);line-height:1.3;display:block;margin-top:1px}
+.pp{text-align:right;flex-shrink:0}
+.pp-orig{font-size:12px;font-weight:500;color:#a89b85;display:block;text-align:right;text-decoration:line-through}
+.pr{font-size:16px;font-weight:800;white-space:nowrap;display:block;color:var(--text)}
+.ps{font-size:12px;font-weight:700;white-space:nowrap;color:#5c8a5c}
+.pk-badge{position:absolute;top:-11px;right:16px;background:var(--gold);color:#fff;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:3px 10px;border-radius:20px}
+.atc{display:block;width:100%;background:var(--gold-dark);color:#fff;border:none;border-radius:16px;font-size:19px;font-weight:800;letter-spacing:.3px;padding:18px 24px;text-transform:uppercase;text-align:center;position:relative;overflow:hidden;margin-top:6px;box-shadow:0 6px 20px rgba(138,109,63,.35)}
+.atc:active{transform:scale(.99)}
+.atc-sub{text-align:center;font-size:11.5px;color:var(--sub);margin-top:10px;display:flex;align-items:center;justify-content:center;gap:6px}
+.cta2{padding:34px 18px 36px;border-top:1px solid var(--line);text-align:center}
+.cta2-in{max-width:520px;margin:0 auto}
+.cta2-h{font-family:'Playfair Display',serif;font-size:23px;line-height:1.32;font-weight:700;margin-bottom:10px}
+.cta2-p{font-size:14.5px;line-height:1.7;color:var(--sub);margin-bottom:20px}
+
+/* divider */
+.dv{height:1px;background:var(--line)}
+.cw{max-width:860px;margin:0 auto;padding:0}
+
+/* intro */
+.in{padding:22px 18px 0;font-size:15px;line-height:1.7;color:#463d31}
+.in strong{font-weight:700;color:var(--text)}
+
+/* bullets */
+.bl{padding:16px 18px 22px}
+.br{display:flex;align-items:flex-start;gap:11px;margin-bottom:12px}
+.br:last-child{margin-bottom:0}
+.bk{width:22px;height:22px;flex-shrink:0;border-radius:50%;background:var(--gold-light);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.bk svg{width:11px;height:11px}
+.bt{font-size:14.5px;font-weight:600;line-height:1.5;padding-top:1px}
+
+/* section image blocks */
+.imgsec{padding:0}
+.imgsec img{width:100%;display:block}
+.imgsec-cap{padding:16px 18px 28px}
+.imgsec-tag{font-size:11.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px}
+.imgsec-h{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1.3;margin-bottom:10px}
+.imgsec-p{font-size:14.5px;line-height:1.75;color:#463d31}
+
+/* benefits */
+.bf{padding:28px 18px;border-top:1px solid var(--line)}
+.h1{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;margin-bottom:20px;text-align:center}
+.bi{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.bi:last-child{border-bottom:none;padding-bottom:0}
+.bd{width:24px;height:24px;background:var(--gold-dark);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.bd svg{width:11px;height:11px}
+.btt{font-size:14.5px;font-weight:800;margin-bottom:3px}
+.bds{font-size:13.5px;color:var(--sub);line-height:1.55}
+
+/* ritual (9 dias) */
+.rt{padding:28px 18px;border-top:1px solid var(--line);text-align:center}
+.rt .h1{margin-bottom:6px}
+.rt-sub{font-size:14px;color:var(--sub);margin-bottom:22px}
+.rt img{width:100%;border-radius:16px;margin-bottom:16px;box-shadow:0 8px 30px rgba(43,36,28,.1)}
+.rt-steps{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left;margin-top:8px}
+.rt-step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.rt-step b{font-size:13px;color:var(--gold-dark);display:block;margin-bottom:4px}
+.rt-step span{font-size:12.5px;color:var(--sub);line-height:1.5;display:block}
+
+/* community */
+.cm{padding:0;border-top:1px solid var(--line)}
+.cm img{width:100%;display:block}
+.cm-cap{padding:22px 18px 30px;text-align:center}
+.cm-cap .h1{margin-bottom:10px}
+.cm-cap p{font-size:14.5px;line-height:1.75;color:#463d31;max-width:520px;margin:0 auto}
+
+/* depoimentos */
+.tm{padding:28px 18px;border-top:1px solid var(--line);background:var(--card)}
+.tm .h1{margin-bottom:16px}
+.tm-sub{text-align:center;font-size:13.5px;color:var(--sub);margin-top:-10px;margin-bottom:20px}
+.tm-grid{display:flex;flex-direction:column;gap:14px}
+.tm-card{border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;background:#fffdf9}
+.tm-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.tm-name{font-size:13.5px;font-weight:800}
+.tm-city{font-size:11.5px;color:var(--sub);font-weight:600}
+.tm-stars{display:flex;gap:2px;margin-bottom:8px}
+.tm-stars svg{width:13px;height:13px;fill:var(--gold)}
+.tm-txt{font-size:13.5px;line-height:1.65;color:#463d31}
+.tm-txt b{color:var(--gold-dark);font-weight:800}
+
+/* faq */
+.fq{padding:30px 18px 32px;border-top:1px solid var(--line)}
+.fh{text-align:center;font-family:'Playfair Display',serif;font-size:22px;font-weight:700;line-height:1.2;margin-bottom:22px}
+.fi{margin-bottom:10px}
+.fqq{display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--line);border-radius:14px;padding:15px 18px;font-size:13.5px;color:var(--text);gap:12px;line-height:1.35;background:var(--card);user-select:none;transition:border-color .15s}
+.fi.op .fqq{border-color:var(--gold-dark);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.fp{flex-shrink:0;font-size:20px;font-weight:300;line-height:1;transition:transform .25s;color:var(--gold-dark)}
+.fi.op .fp{transform:rotate(45deg)}
+.fa{display:grid;grid-template-rows:0fr;font-size:13.5px;line-height:1.65;color:var(--sub);transition:grid-template-rows .2s ease,padding .18s ease,border-width .18s ease;border:1.5px solid var(--gold-dark);border-top:none;border-radius:0 0 14px 14px;padding:0 18px}
+.fa>*{overflow:hidden;min-height:0;font-size:13.5px;line-height:1.7;color:#5a5044}
+.fi.op .fa{grid-template-rows:1fr;padding:12px 18px 16px}
+
+/* guarantee */
+.gu{padding:30px 18px 40px;border-top:1px solid var(--line);text-align:center}
+.gu img{width:84px;height:84px;margin:0 auto 16px}
+.gt{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:12px}
+.gbo{font-size:13.5px;line-height:1.75;color:var(--sub);max-width:480px;margin:0 auto}
+
+/* footer batch note */
+.ft{padding:20px 18px 40px;text-align:center;font-size:12px;color:var(--sub);border-top:1px solid var(--line)}
+.ft b{color:var(--gold-dark)}
+
+/* ── TABLET+ ── */
+@media(min-width:768px){
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:start;padding:24px 32px 0}
+  .cw{padding:0 32px}
+  .bc{padding:12px 32px}
+  header{padding:0 32px}
+  .st{padding:0 0 12px}
+  .bb{padding:0 0 24px}
+  .hero-right{padding-left:36px}
+  .pn{font-size:clamp(30px,3.8vw,40px)}
+  .in{padding:28px 0 0;font-size:15.5px}
+  .bl{padding:20px 0 24px}
+  .bf,.rt,.tm,.fq,.gu,.cta2{padding-left:0;padding-right:0}
+  .bf-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+  .rt-steps{grid-template-columns:repeat(3,1fr)}
+  .imgsec-cap{padding:20px 0 32px}
+  .tm-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+}
+@media(min-width:1024px){
+  .hero-grid{grid-template-columns:52% 48%;padding:32px 48px 0}
+  header{padding:0 48px}
+  .bc{padding:12px 48px}
+  .cw{max-width:900px;padding:0 48px;margin:0 auto}
+}
+</style>
+
+<!-- SVG SYMBOLS -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ico-check" viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="#8a6d3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="ico-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="ico-tick" viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="ico-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></symbol>
+  <symbol id="ico-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+</svg>
+
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="tb">SE VOCÊ ESTÁ LENDO ISSO AGORA, NÃO É COINCIDÊNCIA · LOTE ATUAL: 100 UNIDADES SELADAS</div>
+
+<!-- HEADER -->
+<header>
+  <div class="hlogo">Vela da Prosperidade</div>
+  <div class="hi">
+    <button aria-label="Carrinho"><svg><use href="#ico-cart"/></svg><div class="cn">0</div></button>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="bc">
+  <a href="#">Início</a><span class="s">&rsaquo;</span>
+  <a href="#">Loja</a><span class="s">&rsaquo;</span>
+  <span class="c">Vela da Prosperidade Selada</span>
+</nav>
+
+<!-- HERO -->
+<div class="hero-grid">
+<div class="hero-left">
+  <div class="pc-img">
+    <img src="imagens/hero.png" alt="Vela da Prosperidade Selada acesa, código de prosperidade em cera">
+  </div>
+</div>
+
+<div class="hero-right">
+<div class="st">
+  <div class="sr">
+    <svg class="sr"><use href="#ico-star"/></svg>
+    <svg class="sr"><use href="#ico-star"/></svg>
+    <svg class="sr"><use href="#ico-star"/></svg>
+    <svg class="sr"><use href="#ico-star"/></svg>
+    <svg class="sr"><use href="#ico-star"/></svg>
+    <span class="srn">12.847 pessoas já destravaram o dinheiro</span>
+  </div>
+  <div class="pn"><span>O ritual selado de 9 noites que quebra o bloqueio e destrava seu dinheiro</span>Vela da Prosperidade Selada</div>
+</div>
+
+<!-- BUYBOX -->
+<div class="bb">
+
+  <div class="pk on" onclick="selPkg(this)" data-price="147" data-url="https://pay.hotmart.com/O106842083E">
+    <div class="pk-badge">MAIS ESCOLHIDO</div>
+    <div class="rd"></div>
+    <div class="pi">
+      <div class="pl">Kit Novena Completo</div>
+      <span class="pl-days">9 velas · uma para cada dia do desbloqueio</span>
+    </div>
+    <div class="pp">
+      <span class="pp-orig">R$423</span>
+      <span class="pr">R$147</span>
+      <div class="ps">frete grátis</div>
+    </div>
+  </div>
+
+  <div class="pk" onclick="selPkg(this)" data-price="47" data-url="https://pay.hotmart.com/E106842622M">
+    <div class="rd"></div>
+    <div class="pi">
+      <div class="pl">Vela Avulsa</div>
+      <span class="pl-days">1 unidade, 7cm aprox.</span>
+    </div>
+    <div class="pp">
+      <span class="pr">R$47</span>
+    </div>
+  </div>
+
+  <div class="pk" onclick="selPkg(this)" data-price="198" data-url="https://pay.hotmart.com/T106842537J">
+    <div class="rd"></div>
+    <div class="pi">
+      <div class="pl">Kit Família: 2 Novenas</div>
+      <span class="pl-days">18 velas, para destravar a casa inteira</span>
+    </div>
+    <div class="pp">
+      <span class="pp-orig">R$294</span>
+      <span class="pr">R$198</span>
+      <div class="ps">frete grátis</div>
+    </div>
+  </div>
+
+  <a class="atc" id="atcBtn" href="https://pay.hotmart.com/O106842083E">QUERO DESTRAVAR MINHA PROSPERIDADE AGORA</a>
+  <div class="atc-sub"><svg width="14" height="14"><use href="#ico-truck"/></svg> Envio discreto para todo o Brasil</div>
+</div>
+</div><!-- /hero-right -->
+</div><!-- /hero-grid -->
+
+<div class="dv"></div>
+
+<div class="cw">
+
+<!-- INTRO -->
+<p class="in">Você já checou o saldo no celular à meia-noite torcendo pro número ser diferente do que já sabia que ia ser. Já sentiu aquele nó subindo na garganta antes de abrir o boleto. Existe um motivo pelo qual o dinheiro não entra. Mesmo quando você trabalha duro. Mesmo quando você "faz tudo certo". Não é falta de esforço. Não é falta de mérito. É um <strong>bloqueio espiritual selado</strong>, e nenhuma afirmação positiva, nenhum quadro dos sonhos, nenhuma lei da atração vai abrir isso sozinha. Você já deseja o dinheiro. Isso nunca foi o problema. O que falta é destravar o caminho por onde ele entra. A <strong>Vela da Prosperidade Selada</strong> é um kit de nove velas artesanais, uma para cada dia da novena. Feita pra destravar esse bloqueio pela raiz, com o código de prosperidade gravado em cada vela, selado sob oração, uma para cada noite. Mas antes de acender a primeira, tem uma coisa que você precisa saber sobre como ela nasce, porque é isso que faz o bloqueio ceder.</p>
+
+<!-- BULLETS -->
+<div class="bl">
+  <div class="br"><div class="bk"><svg><use href="#ico-check"/></svg></div><div class="bt">9 velas artesanais, seladas uma a uma sob oração, uma pra cada noite, até o bloqueio se romper.</div></div>
+  <div class="br"><div class="bk"><svg><use href="#ico-check"/></svg></div><div class="bt">Cera vegetal, queima limpa e duradoura, 3 a 5 horas por vela, sem fumaça excessiva e sem cheiro forte, acende tranquila até em quarto pequeno, sem virar assunto pra ninguém em casa.</div></div>
+  <div class="br"><div class="bk"><svg><use href="#ico-check"/></svg></div><div class="bt">7cm de altura aprox., cabe em qualquer altar, cômoda ou mesa de cabeceira.</div></div>
+  <div class="br"><div class="bk"><svg><use href="#ico-check"/></svg></div><div class="bt">Embalagem para presente incluída, pronta pra dar a quem também precisa destravar.</div></div>
+  <div class="br"><div class="bk"><svg><use href="#ico-check"/></svg></div><div class="bt">Produção em lotes de 100 unidades. Isso não é fábrica, é feito à mão.</div></div>
+</div>
+</div>
+
+<div class="dv"></div>
+
+<!-- ARTESANATO -->
+<div class="imgsec">
+  <img src="imagens/artesanato.png" alt="Processo artesanal de fabricação da Vela da Prosperidade Selada">
+</div>
+<div class="cw"><div class="imgsec-cap">
+  <div class="imgsec-tag">Selada à mão</div>
+  <div class="imgsec-h">Cada vela carrega uma intenção, não é só cera</div>
+  <p class="imgsec-p">Cada vela é moldada manualmente em cera vegetal derretida, despejada em moldes que gravam o código de prosperidade na cera, o mesmo símbolo que você vê em cada vela do kit, e selada sob oração antes de sair do ateliê. Não é produção industrial, não é vela genérica de loja de R$5. É um processo lento, feito por quem entende que intenção também se transmite pelas mãos. É essa intenção, gravada vela por vela, que chega pronta dentro do seu kit.</p>
+</div></div>
+
+<!-- DETALHE MACRO -->
+<div class="imgsec">
+  <img src="imagens/macro.png" alt="Detalhe esculpido da Vela da Prosperidade Selada, símbolo do código gravado na cera">
+</div>
+
+<!-- BENEFÍCIOS -->
+<div class="cw"><div class="bf">
+  <div class="h1">O que vem no kit</div>
+  <div class="bf-grid">
+  <div class="bi"><div class="bd"><svg><use href="#ico-tick"/></svg></div><div><div class="btt">9 velas numeradas por dia</div><div class="bds">Sequência clara pra você não quebrar o ciclo de desbloqueio.</div></div></div>
+  <div class="bi"><div class="bd"><svg><use href="#ico-tick"/></svg></div><div><div class="btt">Cartão com o roteiro da novena da prosperidade</div><div class="bds">Passo a passo simples pra conduzir as nove noites sem pular nenhuma.</div></div></div>
+  <div class="bi"><div class="bd"><svg><use href="#ico-tick"/></svg></div><div><div class="btt">Embalagem pronta para presente</div><div class="bds">Caixa com papel de seda e fita, sem precisar embrulhar nada.</div></div></div>
+  <div class="bi"><div class="bd"><svg><use href="#ico-tick"/></svg></div><div><div class="btt">Cera vegetal de queima limpa</div><div class="bds">Sem parafina de origem duvidosa, sem fuligem excessiva.</div></div></div>
+  </div>
+</div></div>
+
+<!-- RITUAL 9 DIAS -->
+<div class="cw"><div class="rt">
+  <div class="h1">O ritual dos nove dias que destrava o dinheiro</div>
+  <p class="rt-sub">Uma vela por noite, na ordem, até o bloqueio se romper</p>
+  <img src="imagens/ritual.png" alt="Sequência das nove velas da novena da prosperidade, uma para cada dia">
+  <div class="rt-steps">
+    <div class="rt-step"><b>Antes de começar</b><span>Escolha um lugar fixo (altar, cômoda ou mesa de cabeceira) onde as nove velas vão ficar até o fim da novena. Esse será o ponto de ancoragem do seu pedido.</span></div>
+    <div class="rt-step"><b>A cada noite</b><span>Acenda a vela do dia correspondente, sempre no mesmo horário se possível, e diga em voz baixa aquilo que precisa entrar na sua vida. Sem pressa. Sem dúvida.</span></div>
+    <div class="rt-step"><b>Ao final</b><span>Complete o nono dia com a última vela. Imagine acordar no dia seguinte sentindo que alguma coisa mudou por dentro, o peso mais leve, a cabeça mais calma. É exatamente nesse ponto que a virada costuma aparecer: um valor específico, uma proposta, uma dívida que se resolve.</span></div>
+  </div>
+</div></div>
+
+<!-- CTA MEIO -->
+<div class="cw"><div class="cta2"><div class="cta2-in">
+  <div class="cta2-h">O bloqueio continua de pé enquanto nada é feito</div>
+  <p class="cta2-p">Você já entendeu como as nove noites destravam o caminho. Falta a primeira vela.</p>
+  <a class="atc" href="https://pay.hotmart.com/O106842083E">QUERO DESTRAVAR MINHA PROSPERIDADE AGORA</a>
+  <div class="atc-sub"><svg width="14" height="14"><use href="#ico-truck"/></svg> Envio discreto para todo o Brasil</div>
+</div></div></div>
+
+<!-- AMBIENTE / ALTAR -->
+<div class="imgsec">
+  <img src="imagens/altar.png" alt="Vela da Prosperidade acesa em altar doméstico à noite">
+</div>
+<div class="cw"><div class="imgsec-cap">
+  <div class="imgsec-tag">No seu espaço</div>
+  <div class="imgsec-h">Não precisa de altar grande, precisa de intenção</div>
+  <p class="imgsec-p">Uma cômoda, uma mesa de cabeceira, um cantinho tranquilo já bastam. A vela é o ponto de referência que te chama de volta, noite após noite, até completar os nove dias. Isso não é lei da atração, não é afirmação repetida no espelho. É um ritual concreto, com início, meio e fim marcado.</p>
+</div></div>
+
+<!-- UNBOXING -->
+<div class="imgsec">
+  <img src="imagens/unbox.png" alt="Kit da Vela da Prosperidade embalado em caixa para presente">
+</div>
+<div class="cw"><div class="imgsec-cap">
+  <div class="imgsec-tag">Para presentear</div>
+  <div class="imgsec-h">Sai pronta pra presentear quem também precisa destravar</div>
+  <p class="imgsec-p">Cada kit sai embalado em caixa própria, com papel de seda e laço. Se for presente pra alguém endividado, endurecido no trabalho, sem saída, não precisa embrulhar nada. Se for pra você, é o primeiro passo que faltava.</p>
+</div></div>
+
+<!-- COMUNIDADE -->
+<div class="cm">
+  <img src="imagens/maos-unidas.png" alt="Mãos unidas em oração ao redor das velas da novena da prosperidade">
+  <div class="cw"><div class="cm-cap">
+    <div class="h1">Você não foi escolhido por acaso</div>
+    <p>12.847 pessoas já fizeram essa novena antes de você, e, enquanto você lê isso, alguém em algum canto do Brasil está acendendo a vela do dia 1 ao mesmo tempo. Você não vai fazer essas nove noites sozinha. Muitas estavam exatamente onde você está agora: no vermelho, com aquele nó no estômago toda vez que o boleto vence, sem saída visível, cansadas de tentar sozinhas. O bloqueio que impede o dinheiro de entrar não se resolve com mais esforço. Ele se resolve destravando por dentro. Essa novena não é pra quem quer testar por curiosidade e parar no terceiro dia. É pra quem vai até a nona vela, sem pular nenhuma noite.</p>
+  </div></div>
+</div>
+
+<!-- ORAÇÃO -->
+<div class="imgsec">
+  <img src="imagens/oracao.png" alt="Mãos em oração ao lado da Vela da Prosperidade acesa">
+</div>
+
+<!-- DEPOIMENTOS -->
+<div class="cw"><div class="tm">
+  <div class="h1">Quem destravou, contou</div>
+  <p class="tm-sub">Relatos enviados por quem completou os 9 dias</p>
+  <div class="tm-grid">
+
+    <div class="tm-card">
+      <div class="tm-top"><span class="tm-name">Marlene S.</span><span class="tm-city">Sorocaba, SP</span></div>
+      <div class="tm-stars"><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg></div>
+      <div class="tm-txt">Eu tava com o nome sujo há 2 anos, sem conseguir nem abrir conta. No <b>7º dia da novena recebi um pix de R$3.200</b> que eu nem esperava, de uma restituição que eu tinha esquecido que existia. Paguei a dívida mais velha no mesmo dia. Não sei explicar, só sei que funcionou.</div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-top"><span class="tm-name">Cida R.</span><span class="tm-city">Contagem, MG</span></div>
+      <div class="tm-stars"><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg></div>
+      <div class="tm-txt">Já tinha feito de tudo, quadro dos sonhos, afirmação, terapia financeira. Nada travava tanto quanto travava minha cabeça. No dia seguinte que terminei as 9 velas, <b>fui chamada pra uma vaga que pagava R$1.400 a mais</b> do que eu ganhava. Isso não é coincidência.</div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-top"><span class="tm-name">Joana P.</span><span class="tm-city">Feira de Santana, BA</span></div>
+      <div class="tm-stars"><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg></div>
+      <div class="tm-txt">Comprei desconfiada, achando que era só mais uma vela bonita. No <b>5º dia recebi uma proposta de cliente antigo</b>, um valor que eu tinha cobrado há meses e já tinha dado como perdido, R$980. No 9º dia veio outro, maior ainda. Comprei o kit família pra minha mãe também.</div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-top"><span class="tm-name">Vanessa T.</span><span class="tm-city">Caxias do Sul, RS</span></div>
+      <div class="tm-stars"><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg></div>
+      <div class="tm-txt">Minha avó sempre falou que existe um bloqueio que passa de geração em geração se ninguém quebra. Eu ri quando ouvi isso a vida toda. Depois da novena, <b>consegui negociar uma dívida de R$6.500 por menos da metade</b>, coisa que o banco tinha recusado 3 vezes antes.</div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-top"><span class="tm-name">Regina A.</span><span class="tm-city">Belém, PA</span></div>
+      <div class="tm-stars"><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg></div>
+      <div class="tm-txt">Comecei a novena num momento de desespero total, aluguel atrasado, geladeira vazia. No <b>8º dia caiu um dinheiro de um seguro que eu tinha esquecido que existia, R$2.100</b>. Chorei igual criança. Já indiquei pra cinco pessoas da minha igreja.</div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-top"><span class="tm-name">Débora L.</span><span class="tm-city">Uberlândia, MG</span></div>
+      <div class="tm-stars"><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg><svg><use href="#ico-star"/></svg></div>
+      <div class="tm-txt">Eu não sou de acreditar em nada fácil assim, mas acendi as 9 velas exatamente como o cartão orientava. No dia seguinte ao último dia, <b>meu ex pagou de uma vez uma pensão atrasada de R$4.700</b> que eu já tinha desistido de cobrar na justiça. Só digo: teste você mesma.</div>
+    </div>
+
+  </div>
+</div></div>
+
+<!-- FAQ -->
+<div class="cw"><div class="fq">
+  <div class="fh">Perguntas Frequentes</div>
+
+  <div class="fi"><div class="fqq" onclick="faq(this)">Isso é a mesma coisa que lei da atração ou afirmação positiva?<span class="fp">+</span></div><div class="fa"><div>Não. Lei da atração e afirmação trabalham só com o pensamento, e pensamento sozinho nunca quebrou bloqueio nenhum, senão ninguém mais precisaria de vela, reza ou ritual. A novena da Vela da Prosperidade age em outro nível: é ritual, é intenção concreta, é ação repetida por 9 noites seguidas, sempre no mesmo lugar, com um objeto físico como âncora. É diferente porque não depende só da sua cabeça, depende do que você faz, noite após noite, até a nona vela se apagar.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">De que material é feita a vela?<span class="fp">+</span></div><div class="fa"><div>Cera vegetal, moldada à mão sobre o molde do código de prosperidade e selada sob oração antes do envio. Não usamos parafina de origem duvidosa. A queima é limpa, com fumaça reduzida comparada a velas industriais comuns.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">Em quanto tempo eu vejo resultado?<span class="fp">+</span></div><div class="fa"><div>Cada pessoa é diferente, e o bloqueio de cada um tem um tamanho diferente. Os relatos que recebemos mostram mudanças já entre o 5º e o 9º dia da novena, mas o compromisso é seu: completar os 9 dias sem pular nenhum é o que sustenta o desbloqueio.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">Quanto tempo cada vela dura acesa?<span class="fp">+</span></div><div class="fa"><div>Cada vela tem cerca de 7cm de altura e queima em média entre 3 e 5 horas contínuas, o suficiente para o momento do ritual da noite. Recomendamos apagar e guardar entre um dia e outro da novena.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">É seguro acender em casa?<span class="fp">+</span></div><div class="fa"><div>Sim, seguindo os cuidados básicos de qualquer vela: acender sobre superfície resistente ao calor, longe de cortinas e materiais inflamáveis, nunca deixar sem supervisão e manter fora do alcance de crianças e animais.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">O kit vem com instruções da novena?<span class="fp">+</span></div><div class="fa"><div>Sim. O Kit Novena Completo acompanha um cartão simples com a sequência dos nove dias e o que dizer em cada noite, para te ajudar a manter o ritual do início ao fim sem quebrar a corrente.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">Por que o lote é limitado?<span class="fp">+</span></div><div class="fa"><div>Cada vela é selada individualmente, sob oração, uma por uma. Não existe forma de produzir isso em escala industrial sem perder o que faz o ritual funcionar. Por isso trabalhamos com lotes de 100 unidades, e cada lote esgota antes do próximo ser produzido.</div></div></div>
+  <div class="fi"><div class="fqq" onclick="faq(this)">Posso comprar para presentear?<span class="fp">+</span></div><div class="fa"><div>Sim, todos os kits já saem embalados prontos para presente, com caixa, papel de seda e laço. É um dos presentes mais pedidos pra quem está passando por dificuldade financeira.</div></div></div>
+</div></div>
+
+<!-- GARANTIA -->
+<div class="cw"><div class="gu">
+  <img src="imagens/selo.png" alt="Selo de garantia da Vela da Prosperidade Selada">
+  <div class="gt">Garantia sem enrolação: veio com defeito, a gente troca. Ponto.</div>
+  <p class="gbo">Se sua vela chegar danificada ou com algum defeito de fabricação, trocamos sem custo. É só entrar em contato com uma foto do produto recebido em até 7 dias após a entrega. O compromisso é nosso, do ateliê até a sua porta.</p>
+</div></div>
+
+<!-- CTA FINAL -->
+<div class="cw"><div class="cta2"><div class="cta2-in">
+  <div class="cta2-h">Nove noites para destravar o que está parado</div>
+  <p class="cta2-p">Uma vela por noite, na ordem, até a nona. Comece assim que o kit chegar.</p>
+  <a class="atc" href="https://pay.hotmart.com/O106842083E">QUERO DESTRAVAR MINHA PROSPERIDADE AGORA</a>
+  <div class="atc-sub"><svg width="14" height="14"><use href="#ico-truck"/></svg> Envio discreto para todo o Brasil</div>
+</div></div></div>
+
+</div><!-- /cw -->
+
+<!-- FOOTER / LOTE -->
+<div class="ft">Produção artesanal em lotes limitados e selados sob oração. <b>Lote atual: 100 unidades.</b> Novo lote só depois que este esgotar, e não sabemos quando será liberado de novo.</div>
+
+<!-- JS -->
+<script>
+var pkgs=document.querySelectorAll('.pk');
+function selPkg(el){
+  pkgs.forEach(function(r){r.classList.remove('on')});
+  el.classList.add('on');
+  syncCheckout();
+}
+function syncCheckout(){
+  var sel=document.querySelector('.pk.on');
+  if(!sel||!sel.getAttribute('data-url'))return;
+  document.querySelectorAll('a.atc').forEach(function(b){b.setAttribute('href',sel.getAttribute('data-url'))});
+}
+syncCheckout();
+function faq(el){
+  var it=el.parentElement,op=it.classList.contains('op');
+  document.querySelectorAll('.fi').forEach(function(i){i.classList.remove('op')});
+  if(!op)it.classList.add('op');
+}
+</script>
+
+</body>
+</html>
